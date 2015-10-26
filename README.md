@@ -1,25 +1,40 @@
-# FeedHenry Hello World MBaaS Server
+# Birdhouses Inc. Orders Service
 
-This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs. 
+This orders service allows us to create and list orders from the database. 
 
-# Group Hello World API
+# Group Orders API
 
-# hello [/hello]
+# orders [/orders]
 
-'Hello world' endpoint.
+'Orders' endpoint.
 
-## hello [POST] 
+## list [GET] 
 
-'Hello world' endpoint.
+'List Orders' endpoint.
+
++ Request (application/json)
+
++ Response 200 (application/json)
+    + Body
+    
+            {
+              "list": ["order", "order2..."]
+            }
+
+## list [POST] 
+
+'Create Order' endpoint.
 
 + Request (application/json)
     + Body
+    
             {
-              "hello": "world"
+              "some": "order data"
             }
 
 + Response 200 (application/json)
     + Body
+    
             {
-              "msg": "Hello world"
+              "msg": "order goes here"
             }
